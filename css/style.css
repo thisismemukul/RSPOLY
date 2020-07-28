@@ -1,0 +1,323 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+@font-face{
+	font-family: 'Bebas Neue';
+	src: url(../fonts/BebasNeue-Regular.ttf);
+	font-style: normal;
+}
+@font-face{
+	font-family: 'HomepageBaukasten-Bold';
+	src: url(../fonts/HomepageBaukasten-Bold.ttf);
+	font-style: normal;
+}
+@font-face{
+	font-family: 'Quicksand-Light';
+	src:url(../fonts/Quicksand-Light.otf);
+	font-style: normal;
+}
+@font-face{
+	font-family: 'Kiona-Regular';
+	src:url(../fonts/Kiona-Regular.ttf);
+	font-style: normal;
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------
+BODY
+*/
+html body{
+background-color: #fff;
+}
+.header{
+	background-color: #0000/*#fffafa*/;
+}
+.navbar{
+	margin: 0px 10px;
+	padding: 8px 10px;
+}
+
+.brand a.social-top{
+   color: #000;
+   font-size: 30px;
+}
+.brand {
+  padding-left: 50px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  position: relative;
+  width: 20%;
+ float: left;
+	display: inline-block;
+}
+.brand a {
+  color: #333;
+  font-size: 24px;
+  font-weight: 700;
+  opacity: 1;
+  text-decoration: none;
+}
+.brand a img{
+	height: 90%;
+	width: 90%;
+}
+.checkbtn{
+	font-size: 20px;
+	color: #000;
+	float: right;
+	line-height: 80px;
+	margin-right: 40px;
+	cursor: pointer;
+	display: none;
+}
+.checkbtn i.cross{
+display: none;
+}
+#check{
+	float: right;
+display: none;
+}
+
+nav ul{
+	 width: 70%;
+     float: right;
+	margin-right: 0px;
+	display: inline-block;
+	z-index: 1;
+ 
+}
+nav ul li{
+	font-family: Kiona-Regular;
+	display: inline-block;
+	line-height: 80px;
+	margin: 0 20px;
+}
+nav ul li a.active{
+	color: #fff;
+	background: #000;
+}
+nav ul li a{
+	color: #000;
+	font-size: 20px;
+	text-transform: uppercase;
+	text-decoration: none;
+	cursor: pointer;
+	padding: 7px 13px;
+	border-radius: 3px;
+}
+nav ul li ul{
+	display: none;
+	position: absolute;
+	border-radius: 8px;
+	background: #ffffff;
+	box-shadow: 0 2px 4px 0 #0003;
+	width: 40%;
+}
+nav ul li.down:hover ul:not(.downul){
+	display: block;
+}
+nav ul li ul li{
+	display: block;
+	font-size: 5px;
+	line-height: 30px;	
+}
+nav ul li ul li a{
+	padding: 3px 6px;
+	font-size: 15px;
+	color: #000;
+	text-align: center;
+}
+nav ul li ul li ul{
+	background: #e7e7e7;
+	display: none;
+	position: relative;
+	border-radius: 8px;
+}
+nav ul li ul li.down1:hover ul{
+	display: block;
+}
+
+nav ul li a:hover:not(.notheme){
+	background: #000;
+	color: #fff;
+	transition: 0.5s;
+	text-decoration: none;
+}
+nav ul li a.notheme:hover{
+	color: inherit;
+	transition: 0.5s;
+	text-decoration: none;
+}
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------*/
+
+/* MEDIA*/
+@media (max-width: 1024px){
+.brand a img{
+	height: 130%;
+	width: 130%;
+}
+	nav ul{	
+	 width: 80%; 
+	 margin: 0;
+}
+nav ul li{
+	margin: 0 8px;
+}
+}
+@media (max-width: 770px){
+.brand{
+padding-left: 20px;
+}
+.checkbtn{
+  display: block;
+}
+.brand a img{
+	height: 130%;
+	width: 130%;
+}
+nav ul{
+	position: absolute;
+	width: 100%;
+	height: auto;
+	background: #ffffff;
+	top: 102%;
+	left: -100%;
+	text-align: center;
+	transition: all 0.5s;
+	box-shadow: 0 2px 4px 0 #0003;
+
+}
+nav ul li{
+display: none;
+}
+nav ul li ul{
+	position: relative;
+	background: #ffffff;
+	width: 100%;
+	left:50%;
+	transform: translateX(-50%);
+	text-align: center;
+	transition: all 0.5s;
+	box-shadow: 0 2px 4px 0 #0003;
+}
+nav ul li ul li a{
+	color: #000;
+}
+nav ul li ul li ul{
+	background: #ffffff;
+	width: 90%;
+	box-shadow:none;
+}
+#check:checked ~ ul{
+	left: 0px;
+}
+#check:checked ~ ul li{
+	display: block;
+	
+}
+#check:checked ~ .checkbtn i.bar{
+	transition: 0.5s;
+display: none;
+}
+#check:checked ~ .checkbtn i.cross{
+	transition: 0.5s;
+display: block;
+}
+}
+/*---------------------------------------------------------------------------------------------------------------------------------*/
+
+/* MAIN*/
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------*/
+
+/* FOOTER */
+/*
+.footer {
+  background-color: #f5f5f5;
+}
+*/
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+footer{
+    position: relative;
+	padding: 20px;
+	text-decoration: none;
+	font-family: Quicksand-Light;
+	background: #000;
+	color: #ffffff;
+}
+footer section{
+}
+footer div.copy{
+	background: #474749;
+	margin: 12px;
+	padding: 15px;
+	text-align: left;
+}
+
+footer div article h1{
+	font-family: 'Bebas Neue';
+	text-align: left;
+}
+footer div.con{
+	margin: 10px;
+	padding: 12px;
+	width: 30%;
+	display: inline-flex;
+}
+footer div.links{
+	margin: 10px;
+	padding: 12px;
+	width: 30%;
+	display: inline-flex;
+}footer div.prod{
+	margin: 10px;
+	padding: 12px;
+	width: 30%;
+	display: inline-flex;
+}
+footer section div article ul{
+	 text-align: center;
+}
+footer section div article ul li{
+	text-align: left;
+}
+footer section div article ul li a{
+	color: #fff;
+}
+footer section div article ul li a:hover{
+	color: #3798da;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 770px){
+	footer div.con{
+	width: 100%;
+	display: block;
+}
+	footer div.links{
+	width: 100%;
+	display: block;
+}	
+	footer div.prod{
+	width: 100%;
+	display: block;
+}
+}
